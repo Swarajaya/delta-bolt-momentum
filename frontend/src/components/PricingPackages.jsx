@@ -93,7 +93,6 @@ const headingVariants = {
 
 function PricingPackages() {
   const CheckIcon = Icons['Check'] || Icons['HelpCircle'];
-  const WhatsappIcon = Icons['MessageCircle'] || Icons['HelpCircle'];
 
   return (
     <section
@@ -120,6 +119,7 @@ function PricingPackages() {
           >
             Pricing Packages
           </motion.span>
+
           <motion.h2
             variants={headingVariants}
             className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 font-jakarta"
@@ -129,6 +129,7 @@ function PricingPackages() {
               Ambition
             </span>
           </motion.h2>
+
           <motion.p
             variants={headingVariants}
             className="text-slate-400 text-lg max-w-xl mx-auto leading-relaxed"
@@ -184,16 +185,24 @@ function PricingPackages() {
                     >
                       <PkgIcon className="w-6 h-6 text-white" strokeWidth={2} />
                     </div>
+
                     <div>
-                      <h3 className="text-xl font-bold text-white font-jakarta">{pkg?.name}</h3>
-                      <p className="text-sm text-slate-400">{pkg?.tagline}</p>
+                      <h3 className="text-xl font-bold text-white font-jakarta">
+                        {pkg?.name}
+                      </h3>
+
+                      <p className="text-sm text-slate-400">
+                        {pkg?.tagline}
+                      </p>
                     </div>
                   </div>
 
                   <div
                     className={`self-start bg-gradient-to-r ${pkg?.badgeBg} border border-white/10 rounded-full px-5 py-2`}
                   >
-                    <span className={`text-sm font-semibold tracking-wide ${pkg?.badgeText}`}>
+                    <span
+                      className={`text-sm font-semibold tracking-wide ${pkg?.badgeText}`}
+                    >
                       Flexible Pricing
                     </span>
                   </div>
@@ -204,24 +213,20 @@ function PricingPackages() {
                         <span
                           className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br ${pkg?.iconBg} flex items-center justify-center`}
                         >
-                          <CheckIcon className="w-3 h-3 text-white" strokeWidth={3} />
+                          <CheckIcon
+                            className="w-3 h-3 text-white"
+                            strokeWidth={3}
+                          />
                         </span>
-                        <span className="text-slate-300 text-sm leading-relaxed">{feature}</span>
+
+                        <span className="text-slate-300 text-sm leading-relaxed">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
 
-                  <motion.a
-                    href="https://wa.me/15550000000?text=Hi%20VELORA%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(pkg?.name)}%20package."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.04 }}
-                    whileTap={{ scale: 0.97 }}
-                    className={`mt-auto flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl font-semibold text-sm bg-gradient-to-r ${pkg?.borderColor} text-white shadow-md transition-all duration-200`}
-                  >
-                    <WhatsappIcon className="w-4 h-4" />
-                    Enquire Now
-                  </motion.a>
+                  <div className="mt-auto h-[54px]" />
                 </div>
               </motion.div>
             );
@@ -235,7 +240,9 @@ function PricingPackages() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          All packages are fully custom and negotiable. Final scope, deliverables, and investment are agreed upon after an initial consultation at no obligation.
+          All packages are fully custom and negotiable. Final scope,
+          deliverables, and investment are agreed upon after an initial
+          consultation at no obligation.
         </motion.p>
       </div>
     </section>
