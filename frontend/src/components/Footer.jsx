@@ -13,10 +13,29 @@ const NAV_LINKS = [
 ];
 
 const SOCIAL_LINKS = [
-  { name: 'Linkedin', icon: 'Linkedin', href: 'https://linkedin.com', label: 'LinkedIn', color: 'from-blue-500 to-blue-600' },
-  { name: 'Instagram', icon: 'Instagram', href: 'https://instagram.com', label: 'Instagram', color: 'from-pink-500 to-rose-500' },
-  { name: 'Twitter', icon: 'Twitter', href: 'https://twitter.com', label: 'Twitter / X', color: 'from-sky-400 to-sky-600' },
-  { name: 'MessageCircle', icon: 'MessageCircle', href: 'https://wa.me/919258903072', label: 'WhatsApp', color: 'from-green-400 to-green-600' },
+  {
+    name: 'Facebook',
+    icon: 'Facebook',
+    href: 'https://www.facebook.com/share/1LHXJQA23U/',
+    label: 'Facebook',
+    color: 'from-blue-500 to-blue-700',
+  },
+
+  {
+    name: 'Instagram',
+    icon: 'Instagram',
+    href: 'https://www.instagram.com/velor.a14?igsh=YXVnYzIwY3k0N2hp',
+    label: 'Instagram',
+    color: 'from-pink-500 to-rose-500',
+  },
+
+  {
+    name: 'MessageCircle',
+    icon: 'MessageCircle',
+    href: 'https://wa.me/919258903072',
+    label: 'WhatsApp',
+    color: 'from-green-400 to-green-600',
+  },
 ];
 
 const containerVariants = {
@@ -40,18 +59,16 @@ const itemVariants = {
 };
 
 function Footer() {
-  const LinkedinIcon = Icons['Linkedin'] || Icons['HelpCircle'];
+  const FacebookIcon = Icons['Facebook'] || Icons['HelpCircle'];
   const InstagramIcon = Icons['Instagram'] || Icons['HelpCircle'];
-  const TwitterIcon = Icons['Twitter'] || Icons['HelpCircle'];
   const MessageCircleIcon = Icons['MessageCircle'] || Icons['HelpCircle'];
   const MailIcon = Icons['Mail'] || Icons['HelpCircle'];
   const PhoneIcon = Icons['Phone'] || Icons['HelpCircle'];
   const MapPinIcon = Icons['MapPin'] || Icons['HelpCircle'];
 
   const iconMap = {
-    Linkedin: LinkedinIcon,
+    Facebook: FacebookIcon,
     Instagram: InstagramIcon,
-    Twitter: TwitterIcon,
     MessageCircle: MessageCircleIcon,
   };
 
@@ -73,7 +90,7 @@ function Footer() {
         viewport={{ once: true, margin: '-80px' }}
         className="relative z-10 max-w-7xl mx-auto px-8 py-16"
       >
-        <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-10 shadow-2xl" style={undefined}>
+        <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-10 shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
             <motion.div variants={itemVariants} className="lg:col-span-1 flex flex-col gap-6">
@@ -94,6 +111,7 @@ function Footer() {
                   <MailIcon size={15} className="shrink-0 text-[#59bfff]" />
                   velora2049@gmail.com
                 </a>
+
                 <a
                   href="tel:+919258903072"
                   className="flex items-center gap-3 text-sm text-slate-400 hover:text-[#59bfff] transition-colors duration-200"
@@ -101,6 +119,7 @@ function Footer() {
                   <PhoneIcon size={15} className="shrink-0 text-[#59bfff]" />
                   +91 9258903072
                 </a>
+
                 <span className="flex items-center gap-3 text-sm text-slate-400">
                   <MapPinIcon size={15} className="shrink-0 text-[#59bfff]" />
                   Dehradun, India
@@ -109,7 +128,10 @@ function Footer() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col gap-4">
-              <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500">Navigation</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+                Navigation
+              </h4>
+
               <ul className="flex flex-col gap-3">
                 {leftLinks.map((link) => (
                   <li key={link.label}>
@@ -125,7 +147,10 @@ function Footer() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col gap-4">
-              <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500">More</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+                More
+              </h4>
+
               <ul className="flex flex-col gap-3">
                 {rightLinks.map((link) => (
                   <li key={link.label}>
@@ -142,10 +167,14 @@ function Footer() {
 
             <motion.div variants={itemVariants} className="flex flex-col gap-6">
               <div>
-                <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Connect</h4>
+                <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">
+                  Connect
+                </h4>
+
                 <div className="flex flex-wrap gap-3">
                   {SOCIAL_LINKS.map((social) => {
                     const SocialIcon = iconMap[social.icon] || Icons['HelpCircle'];
+
                     return (
                       <motion.a
                         key={social.name}
@@ -165,7 +194,10 @@ function Footer() {
               </div>
 
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-4">
-                <p className="text-xs text-slate-400 mb-3">Ready to transform your brand?</p>
+                <p className="text-xs text-slate-400 mb-3">
+                  Ready to transform your brand?
+                </p>
+
                 <motion.a
                   href="https://wa.me/919258903072"
                   target="_blank"
@@ -188,9 +220,21 @@ function Footer() {
             <p className="text-xs text-slate-500">
               &copy; {new Date().getFullYear()} VELORA Digital Solutions. All rights reserved.
             </p>
+
             <div className="flex items-center gap-6">
-              <a href="/#privacy" className="text-xs text-slate-500 hover:text-slate-300 transition-colors duration-200">Privacy Policy</a>
-              <a href="/#terms" className="text-xs text-slate-500 hover:text-slate-300 transition-colors duration-200">Terms of Service</a>
+              <a
+                href="/#privacy"
+                className="text-xs text-slate-500 hover:text-slate-300 transition-colors duration-200"
+              >
+                Privacy Policy
+              </a>
+
+              <a
+                href="/#terms"
+                className="text-xs text-slate-500 hover:text-slate-300 transition-colors duration-200"
+              >
+                Terms of Service
+              </a>
             </div>
           </motion.div>
         </div>
