@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import * as Icons from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -60,18 +61,16 @@ const itemVariants = {
 
 function Footer() {
 
-  const FacebookIcon = Icons['Facebook'] || Icons['BadgeInfo'];
-  const InstagramIcon = Icons['Instagram'] || Icons['Camera'];
-  const MessageCircleIcon = Icons['MessageCircle'];
+  const MessageCircleIcon = FaWhatsapp;
 
   const MailIcon = Icons['Mail'] || Icons['HelpCircle'];
   const PhoneIcon = Icons['Phone'] || Icons['HelpCircle'];
   const MapPinIcon = Icons['MapPin'] || Icons['HelpCircle'];
 
   const iconMap = {
-    Facebook: FacebookIcon,
-    Instagram: InstagramIcon,
-    MessageCircle: MessageCircleIcon,
+    Facebook: FaFacebookF,
+    Instagram: FaInstagram,
+    MessageCircle: FaWhatsapp,
   };
 
   const leftLinks = NAV_LINKS.slice(0, 4);
@@ -176,7 +175,7 @@ function Footer() {
 
                 <div className="flex flex-wrap gap-3">
                   {SOCIAL_LINKS.map((social) => {
-                    const SocialIcon = iconMap[social.icon] || Icons['HelpCircle'];
+                    const SocialIcon = iconMap[social.icon];
 
                     return (
                       <motion.a
@@ -191,8 +190,6 @@ function Footer() {
                       >
                         <SocialIcon
                           size={18}
-                          strokeWidth={2.3}
-                          fill="white"
                           className="text-white"
                         />
                       </motion.a>
