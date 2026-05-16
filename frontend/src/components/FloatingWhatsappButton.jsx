@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as Icons from 'lucide-react';
 
-const WHATSAPP_NUMBER = '+91 9258903072';
+const WHATSAPP_NUMBER = '919258903072';
 const WHATSAPP_MESSAGE = 'Hi VELORA! I\'d like to inquire about your digital services.';
 
 export default function FloatingWhatsappButton({ isContactOpen = false }) {
