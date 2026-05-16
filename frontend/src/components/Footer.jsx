@@ -59,8 +59,9 @@ const itemVariants = {
 };
 
 function Footer() {
-  const FacebookIcon = Icons['BadgeInfo'];
-  const InstagramIcon = Icons['Instagram'];
+
+  const FacebookIcon = Icons['Facebook'] || Icons['BadgeInfo'];
+  const InstagramIcon = Icons['Instagram'] || Icons['Camera'];
   const MessageCircleIcon = Icons['MessageCircle'];
 
   const MailIcon = Icons['Mail'] || Icons['HelpCircle'];
@@ -191,6 +192,7 @@ function Footer() {
                         <SocialIcon
                           size={18}
                           strokeWidth={2.3}
+                          fill="white"
                           className="text-white"
                         />
                       </motion.a>
