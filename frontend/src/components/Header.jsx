@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
-const WHATSAPP_NUMBER = '15550000000';
+const WHATSAPP_NUMBER = '919258903072';
 const WHATSAPP_MESSAGE = 'Hello! I found VELORA online and I want to learn more about your services.';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
