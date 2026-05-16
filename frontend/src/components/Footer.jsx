@@ -59,9 +59,10 @@ const itemVariants = {
 };
 
 function Footer() {
-  const FacebookIcon = Icons['Facebook'] || Icons['HelpCircle'];
-  const InstagramIcon = Icons['Instagram'] || Icons['HelpCircle'];
-  const MessageCircleIcon = Icons['MessageCircle'] || Icons['HelpCircle'];
+  const FacebookIcon = Icons['BadgeInfo'];
+  const InstagramIcon = Icons['Instagram'];
+  const MessageCircleIcon = Icons['MessageCircle'];
+
   const MailIcon = Icons['Mail'] || Icons['HelpCircle'];
   const PhoneIcon = Icons['Phone'] || Icons['HelpCircle'];
   const MapPinIcon = Icons['MapPin'] || Icons['HelpCircle'];
@@ -98,6 +99,7 @@ function Footer() {
                 <span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-[#59bfff] via-[#d4b5fd] to-[#ffdaf3] bg-clip-text text-transparent select-none">
                   VELORA
                 </span>
+
                 <p className="mt-3 text-sm text-slate-400 leading-relaxed max-w-xs">
                   We craft premium digital experiences that elevate brands and drive meaningful growth.
                 </p>
@@ -186,7 +188,11 @@ function Footer() {
                         whileTap={{ scale: 0.95 }}
                         className={`w-10 h-10 rounded-xl bg-gradient-to-br ${social.color} flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200`}
                       >
-                        <SocialIcon size={16} className="text-white" />
+                        <SocialIcon
+                          size={18}
+                          strokeWidth={2.3}
+                          className="text-white"
+                        />
                       </motion.a>
                     );
                   })}
